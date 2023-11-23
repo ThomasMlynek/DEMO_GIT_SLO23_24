@@ -1,38 +1,20 @@
-//Diviseur binaire
-#include <stdio.h>
+#include<stdio.h>
+#include<stdio.h>
+#include<stdbool.h>
 
 void main(void)
 {
-	int ValDec = 0;
-	int ValDec_initial= 0;
-	int Quotient= 0;
-	int Reste= 0;
-
-	//Demander une valeur comprise entre 0 et 255
-	printf_s("Entrez une valeur decimale comprise entre 0 et 255 : ");
-	scanf_s("%d", & ValDec);
-	ValDec_initial = ValDec;
-
-	//Verifier si la valeur est correcte
-	if (ValDec < 0 || ValDec > 255)
-	{
-		printf_s("La valeur decimal doit etre comprise 0 et 255");
-	}
-	else
-	{
-		//Tant que ValDec est différent de zéro
-		while (ValDec != 0)
-		{
-			//Calculer le quotient et le reste de la division par 2
-			Quotient = (ValDec / 2);
-			Reste = (ValDec % 2);
-
-			//Mettre à jour ValDec avec le quotient pour la prochaine itération
-			ValDec = Quotient;
-		}
-
-		//Afficher les étapes de la conversion
-		printf_s("%d, :2 = %d, R = %d\n", ValDec_initial, ValDec, Reste);
-		ValDec_initial = ValDec;
-	}
+	float a = 0.1;
+	int b = 0;
+	signed int la = -128;
+	b = '1';
+	printf("taille en octet de bool :%d\n", sizeof(bool));
+	printf("taille en octet de -128 :%d\n",sizeof(-128));
+	printf("taille en octet d'un float:%d\n", sizeof(a));
+	printf("taille en octet de '1':%d\n", sizeof('1'));
+	printf("taille en octet de 1 chaine :%d\n", sizeof("2431"));
+	printf("taille en octet de double:%d\n", sizeof(double));
+	printf("taille en octet de signed int:%d\n", sizeof(signed int));
 }
+
+
